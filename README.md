@@ -43,10 +43,10 @@ C:\Users\사용자명\Documents\Arduino\libraries 에서 다운로드한 zip 파
 
 ### 동작 개요
 
-Jetson Nano : Temp / Input Volt 기록 및 Temp 그래프 저장, PWM 신호 발생  
+Jetson Nano : Temp / Input Volt 기록 및 PWM 신호 발생  
 arduino : Heater의 온도 값 수신, PWM 신호 수신하여 Heater에 전압 인가  
 MAX6675 : K-Type 열전대 센서, Heater의 온도 값 Arduino에 전달  
-Heater : 0~5V 전압으로 동작, 목표 온도 180 °C  
+Heater : 0~5V 전압으로 동작, 목표 온도 180 °C, 상하 2개 Heater  
 
 ![image](https://user-images.githubusercontent.com/96412126/159418253-2f38adf1-9233-45af-8753-3ecac418b3da.png)
 
@@ -54,10 +54,15 @@ Heater : 0~5V 전압으로 동작, 목표 온도 180 °C
 
 **Ar_GPIO.ino**  
 
-Jetson Nano에서 PWM 값 읽어 Analog Volt 값으로 환산하여 Heater에 전압 인가
-MAX6675를 통해 히터에서 온도 값 받아 Jetson Nano에 전달
+Jetson Nano에서 PWM 값 읽어 Analog Volt 값으로 환산하여 Heater에 전압 인가  
+MAX6675를 통해 히터에서 온도 값 받아 Jetson Nano에 전달  
 
-****  
+**Heater_PID.py**  
 
+Arduino에서 전달받는 온도 값 읽고 GUI에 시간에 따른 온도 그래프 출력  
+받은 온도 값과 목표 온도 값의 차이만큼 PID 값 변화시켜 Arduino에 PWM 값 전달
+input.csv (시간, 온도) / output.csv (시간, 전압) 기록  
 
+**MakeGraph.py**  
 
+Heater_PID.py에서 만들어진 input.csv로 시간에 따른 온도 그래프 작성
