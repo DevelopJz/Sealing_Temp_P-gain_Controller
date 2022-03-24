@@ -306,7 +306,7 @@ fileframe=tkinter.Frame(consoleframe, relief="solid", bd=2)
 fileframe.pack(side="top", fill="both", expand=False)
 
 def findfile():
-       fileframe.filename=tkinter.filedialog.askopenfilename(initialdir="/home/ivh/Downloads", title="Choose Your File", filetypes=(("fmu file", "*.fmu"),))
+       fileframe.filename=tkinter.filedialog.askopenfilename(initialdir="/home/pi/Downloads", title="Choose Your File", filetypes=(("fmu file", "*.fmu"),))
        filelabel_2.config(text=fileframe.filename)
        consolelabel.config(text="Load file")
 
