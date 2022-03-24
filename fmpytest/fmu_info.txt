@@ -1,0 +1,24 @@
+
+Model Info
+
+  FMI Version       2.0
+  FMI Type          Co-Simulation
+  Model Name        MP_HW_TEST_CS_02
+  Description       None
+  Platforms         c-code, linux64, win32, win64
+  Continuous States 6
+  Event Indicators  8
+  Variables         47
+  Generation Tool   Dymola Version 2020x (64-bit), 2019-10-10
+  Generation Date   2020-10-29T08:35:30Z
+
+Default Experiment
+
+  Stop Time         601.6
+  Tolerance         0.0001
+
+Variables (input, output)
+
+Name                Causality              Start Value  Unit     Description
+u                   input                          0.0           
+y                   output                                       
