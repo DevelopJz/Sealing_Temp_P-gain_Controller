@@ -57,7 +57,7 @@ Heater : 0~5V 전압으로 동작, 목표 온도 180 °C, 상하 2개 Heater
 Jetson Nano에서 PWM 값 읽어 Analog Volt 값으로 환산하여 Heater에 전압 인가  
 MAX6675를 통해 히터에서 온도 값 받아 Jetson Nano에 전달  
 
-**Heater_PID.py**  
+**Sealing_PID.py**  
 
 Arduino에서 전달받는 온도 값 읽고 GUI에 시간에 따른 온도 그래프 출력  
 받은 온도 값과 목표 온도 값의 차이만큼 PID 값 변화시켜 Arduino에 PWM 값 전달
