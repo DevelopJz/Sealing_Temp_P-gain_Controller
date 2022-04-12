@@ -66,8 +66,9 @@ input.csv (시간, 온도) / output.csv (시간, 전압) 기록
 **Sealing_PID_GUI**  
 ![image](https://user-images.githubusercontent.com/96412126/162860422-ed2221d7-bbfc-4f83-880b-9b382bd6de62.png)
 
-****  
-
 **MakeGraph.py**  
 
 Heater_PID.py에서 만들어진 input.csv로 시간에 따른 온도 그래프 작성
+
+**Sealing_PID_graph**  
+![image](https://user-images.githubusercontent.com/96412126/162860587-e88fe7be-57bb-4fe8-8eda-d41db79f5703.png)
